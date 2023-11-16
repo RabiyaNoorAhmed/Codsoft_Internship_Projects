@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --white-color: #fff;
+    --white-lighter-1: rgba(255, 255, 255, 0.05);
+    --white-lighter-2: rgba(255, 255, 255, 0.02);
+    --white-lighter-3: rgba(255, 255, 255, 0.03);
+    --black-lighter: rgba(0, 0, 0, 0.02);
+    --hover-color: #849aa5;
+    --green-color: #26eab9;
+
+
+
+}
+
+body {
+    background-color: #111;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animation Background */
+.wrapper span {
+    position: fixed;
+    color: #18191f;
+    text-shadow: 0 0 25px aliceblue,
+        0 0 50px green,
+        0 0 100px green,
+        0 0 150px aliceblue;
+    animation: animate 10s linear infinite;
+    font-size: 100px;
+    font-family: 'Poppins', sans-serif;
+    z-index: -1;
+    bottom: -120px;
+}
+
+.wrapper span:nth-child(1) {
+    left: 60px;
+    animation-delay: 0.6s;
+}
+
+.wrapper span:nth-child(2) {
+    left: 10%;
+    animation-delay: 3s;
+}
+
+.wrapper span:nth-child(3) {
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.wrapper span:nth-child(4) {
+    left: 30%;
+    animation-delay: 5s;
+}
+
+.wrapper span:nth-child(5) {
+    left: 40%;
+    animation-delay: 1s;
+}
+
+.wrapper span:nth-child(6) {
+    left: 50%;
+    animation-delay: 7s;
+}
+
+.wrapper span:nth-child(7) {
+    left: 60%;
+    animation-delay: 6s;
+}
+
+.wrapper span:nth-child(8) {
+    left: 70%;
+    animation-delay: 8s;
+}
+
+.wrapper span:nth-child(9) {
+    left: 80%;
+    animation-delay: 6s;
+}
+
+.wrapper span:nth-child(10) {
+    left: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+/* Calculator */
+.container h1 {
+
+    color: var(--white-color);
+    margin: 30px;
+}
+
+.main {
+    position: relative;
+    right: 50px;
+    width: 23rem;
+    height: 27rem;
+    padding: 30px;
+    padding-top: 90px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: var(--white-lighter-1);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid var(--white-lighter-2);
+    border-left: 1px solid var(--white-lighter-2);
+    box-shadow: 5px 5px 30px var(--black-lighter);
+
+}
+
+.calc {
+    position: absolute;
+    bottom: 1.5rem;
+    width: 20rem;
+    height: 20rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    border-radius: 15px;
+}
+
+.btn {
+    font-size: 2rem;
+    padding: 5px;
+    color: var(--white-color);
+    border-radius: 10px;
+    cursor: pointer;
+    background: var(--white-lighter-1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px var(--black-lighter);
+    backdrop-filter: blur(4.7px);
+    -webkit-backdrop-filter: blur(4.7px);
+    border: 1px solid var(--white-lighter-3);
+    border-style: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+}
+
+.form {
+    width: fit-content;
+}
+
+#display {
+    position: relative;
+    width: 20rem;
+    bottom: 5rem;
+    background: transparent;
+    border: none;
+    color: var(--white-color);
+    padding-top: 1.3rem;
+    text-align: right;
+    padding-bottom: 1.2rem;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    outline-style: none;
+    pointer-events: none;
+
+}
+
+.clear,
+.clear:hover {
+    background-color: var(--green-color);
+}
